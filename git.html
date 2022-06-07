@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <script>
+            function get(parname) {
+                let params = new URLSearchParams(window.location.search);
+                return params.get(parname);
+            }
+
+            if (get("type") == "repo") {
+                window.location.href = "https://github.com/" + get("u") + "/" + get("r")
+            } else if (get("type") == "usr") {
+                window.location.href = "https://github.com/" + get("u")
+            }
+        </script>
+    </head>
+</html>
